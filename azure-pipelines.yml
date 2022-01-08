@@ -8,6 +8,10 @@ trigger:
 
 pool: devops-pool
 
+steps:
+- script: echo Build for LogicApps
+  displayName: 'PlaceHolder'
+
 - task: PublishPipelineArtifact@1
   inputs:
     targetPath: '$(Pipeline.Workspace)'
