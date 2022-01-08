@@ -16,6 +16,12 @@ steps:
 - task: PublishPipelineArtifact@1
   inputs:
     targetPath: '$(Pipeline.Workspace)'
+    artifact: 'logicappsfiles'
+    publishLocation: 'pipeline'
+
+- task: PublishPipelineArtifact@1
+  inputs:
+    targetPath: '$(Pipeline.Workspace)'
     artifact: 'logicapps-files'
     publishLocation: 'pipeline'
 
