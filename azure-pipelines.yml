@@ -6,12 +6,17 @@
 trigger:
 - main
 
-pool:
-  vmImage: ubuntu-latest
+pool: devops-pool
 
 steps:
 - script: echo Hello, world!
   displayName: 'Run a one-line script'
+
+- task: PublishPipelineArtifact@1
+  inputs:
+    targetPath: '$(Pipeline.Workspace)'
+    artifact: 'logicappsfiles'
+    publishLocation: 'pipeline'
 
 - task: PublishPipelineArtifact@1
   inputs:
