@@ -2,7 +2,7 @@
     "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
     "contentVersion": "1.0.0.0",
     "parameters": {
-        "workflows_azdevlogic_name": {
+        "workflows_azlogic_name": {
             "defaultValue": "azdevlogic",
             "type": "string"
         }
@@ -12,7 +12,7 @@
             "apiVersion": "2017-07-01",
             "dependsOn": [],
             "location": "eastus",
-            "name": "[parameters('workflows_azdevlogic_name')]",
+            "name": "[parameters('workflows_azlogic_name')]",
             "properties": {
                 "definition": {
                     "$schema": "https://schema.management.azure.com/providers/Microsoft.Logic/schemas/2016-06-01/workflowdefinition.json#",
